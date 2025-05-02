@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:mauiapp1="clr-namespace:MauiApp1"
+			 x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Frame BackgroundColor="SeaGreen">
+                <StackLayout>
+                    <Label Text="This is binding with an Interface"/>
+                    <mauiapp1:MyControl MyLabels="{Binding MyInterfaceInstance}"></mauiapp1:MyControl>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="OrangeRed">
+                <StackLayout>
+                    <Label Text="This is binding with a Model"/>
+                    <mauiapp1:MyControl MyLabels="{Binding MyModelInstance}"></mauiapp1:MyControl>
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
